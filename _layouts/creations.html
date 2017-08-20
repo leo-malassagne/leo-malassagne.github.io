@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Création: {{ page.title }}</title>
+		<meta charset="UTF-8" />
+		<link href="/creations.css" type="text/css" rel="stylesheet" />
+		{% for script in page.scripts %}
+		<script src="{{ script }}"></script>
+		{% endfor %}
+	</head>
+	<body>
+		{{ content }}
+		<div id="infos">
+			<div style="padding: 10px;">
+				<a href="/creations.html"><h3>Retour</h3></a>
+			</div>
+			<h3>{{ page.title }}</h3>
+			<h4>Description</h4>
+			<p>{{ page.excerpt }}</p>
+			<h4>Langages</h4>
+			<p>{{ page.lang }}</p>
+			{% if page.techs %}
+			<h4>Technologies</h4>
+			<p>{{ page.techs }}</p>
+			{% endif %}
+			{% if page.credits %}
+			<h4>Crédits additionnels</h4>
+			<table>
+				<tbody>
+					{% for credit in page.credits %}
+					<tr>
+						<th>{{ credit[0] }}</th>
+						<td>{{ credit[1] }}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+			{% endif %}
+		</div>
+	</body>
+</html>
