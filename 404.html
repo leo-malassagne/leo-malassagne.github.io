@@ -1,0 +1,23 @@
+---
+title: U Wot m8 ?!
+layout: pages
+---
+<div style="position: relative;">
+	<image src="/assets/images/404.jpg" style="width: 98%; margin: 1%;"/>
+	<div style="background-color: rgba(0,0,0,0.3); border-radius: 5px; padding: 5px; position: absolute; top: 120px; right: 45px; color: white; text-align: center; font-size: 30px;">
+		<h1 style="font-size: 40px;">404</h1>
+		<p id="page-name">x</p>
+		<p>C'est quoi ? &Ccedil;a se mange ?</p>
+	</div>
+</div>
+
+<script>
+	window.onload = function () {
+		var path,
+			page_name;
+		path = window.location.pathname.split("/");
+		page_name = path.pop() || path.pop();
+		page_name = page_name.split(".")[0];
+		document.getElementById("page-name").innerHTML = '"' + page_name + '" ?';
+	}
+</script>

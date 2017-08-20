@@ -1,0 +1,16 @@
+---
+title: Créations
+layout: pages
+stylesheets:
+  - creations-index
+---
+<div class="flex-list">
+	{% for creation in site.creations %}
+	<a class="vignette" style="background-image: url(/assets/images/{{ creation.miniature }})" href="{{ creation.url }}">
+		<div class="desc">
+			<h3>{{ creation.title }}</h3>
+			<p>{{ creation.excerpt }}</p>
+		</div>
+	</a>
+	{% endfor %}
+</div>

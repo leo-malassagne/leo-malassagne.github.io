@@ -1,0 +1,15 @@
+---
+title: Tant vas la cruche
+lang: javascript
+---
+{% highlight js linenos %}
+function Cruche() {
+	var use = 1000;
+	this.remplir = function() {
+		use--;
+		if (use === 0) {
+			delete this;
+		}
+	}
+}
+{% endhighlight %}

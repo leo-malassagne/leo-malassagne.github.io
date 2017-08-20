@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{ page.title }}</title>
+		<meta charset="UTF-8" />
+		<link href="/assets/stylesheets/main.css" type="text/css" rel="stylesheet" />
+		<link href="/assets/stylesheets//header.css" type="text/css" rel="stylesheet" />
+		{% for stylesheet in page.stylesheets %} 
+		<link href="/assets/stylesheets/{{ stylesheet }}.css" type="text/css" rel="stylesheet" />
+		{% endfor %}
+	</head>
+	<body>
+		<header>
+			<span id="prenom">Léo</span><br/>
+			<span id="nom">Malassagne</span>
+			<span id="job">Développeur informatique</span>
+		</header>
+		<nav>
+			<a class="nav_button" href="/index.html">Accueil</a><a class="nav_button" href="/cursus.html">Parcours</a><a class="nav_button" href="/creations.html">Créations</a><a class="nav_button" href="/about.html">À propos</a>
+			<a class="nav_button" style="float: right;" href="#">&#x2191;</a>
+		</nav>
+		{{content}}
+		<footer>
+			<div id="contacts">
+				<div class="box">
+					<h3 class="title">Contact</h3>
+					<table style="margin: auto;">
+						<tbody>
+							<tr>
+								<th>Adresse:</th>
+								<td>20, rue des Fargues<br/>15000 Aurillac</td>
+							</tr>
+							<tr>
+								<th>Mail:</th>
+								<td><a href="mailto:malassagne.leo@gmail.com">malassagne.leo@gmail.com</a></td>
+							</tr>
+							<tr>
+								<th>Tél.</th>
+								<td>06 46 48 92 14</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div id="networks" class="box">
+					<h3 class="title">Réseaux</h3>
+					<a href="https://www.linkedin.com/in/l%C3%A9o-malassagne-84a197117/"><img src="/assets/images/in-logo.png"/></a>
+					<a href="https://github.com/leo-malassagne"><img src="/assets/images/gh-logo.png"/></a>
+				</div>
+			</div>
+			<div id="infos-legal">
+				&copy Copyright 2017 Léo Malassagne - tous droits réservés
+				<a style="float: right">Mentions légales</a>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+a {
+	color: white;
+}
+
+h3 {
+	text-align: center;
+}
+
+.gallery {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.flex-list{
+	padding: 20px;
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+}
+
+.vignette {
+	box-sizing: border-box;
+	width: 32%;
+	height: 200px;
+	background-color: lightgrey;
+	box-shadow: 5px 5px 5px grey;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.desc {
+	width: 100%;
+	box-sizing: border-box;
+	position: absolute;
+	top: 85%;
+	padding: 3px;
+	background-color: rgba(0,0,0,0.75);
+}
+
+.vignette:hover .desc {
+	bottom: unset;
+	height: 100%;
+	top: 0%;
+	animation: slideup 0.05s linear;
+}
+
+.vignette p {
+	display: none;
+}
+
+.vignette:hover p {
+	display: block;
+}
+
+@keyframes slideup {
+	0% {top: 85%;}
+	100% {top: 0%;}
+}
