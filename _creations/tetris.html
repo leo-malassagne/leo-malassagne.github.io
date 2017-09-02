@@ -3,11 +3,14 @@ title: Tetris
 layout: creations
 link: /creations/tetris.html
 miniature: tetris-mini.png
+stylesheets:
+  - tetris
 scripts:
   - https://rawgit.com/leo-malassagne/TetrisJS/master/lib/crafty.js
   - https://rawgit.com/leo-malassagne/TetrisJS/master/lib/soundmanager2.js
   - https://rawgit.com/leo-malassagne/TetrisJS/master/src/components.js
   - https://rawgit.com/leo-malassagne/TetrisJS/master/src/scenes.js
+  - https://rawgit.com/leo-malassagne/TetrisJS/master/src/game.js
 excerpt: Un tetris classique avec musique évolutive.
 lang: Javascript
 techs: CraftyJS, Soundmanager 2
@@ -16,32 +19,19 @@ credits:
 output: true
 ---
 <script>
-	var loc = "https://rawgit.com/leo-malassagne/TetrisJS/master/";
-	var Game = {
-		start: function() {
-			Crafty.init(160,352,"gameScreen");
-			Crafty.background('white');
-			Crafty.scene('Loading');
-		},
-	};
+	var loc = "https://rawgit.com/leo-malassagne/TetrisJS/master/",
+        blockSize = window.innerHeight / 22;
 	window.addEventListener('load', function(){
 		soundManager.setup({
 			url: '/path/to/swf-files/',
 			flashVersion: 9,
 			debugMode: false,
 			onready: function() {
-				Game.start();
+				Game.start(blockSize);
 			}
 		});
 	});
 </script>
-<style type="text/css" media="screen">
-	#gameScreen {
-		margin: 20px auto 0;
-		border: 1px solid lightgrey;
-	}
-</style>
-<div class="content">
+<!--div class="content">
 	<div id="gameScreen"></div>
-</div>
-
+</div-->

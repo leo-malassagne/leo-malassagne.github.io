@@ -4,6 +4,9 @@
 		<title>Création: {{ page.title }}</title>
 		<meta charset="UTF-8" />
 		<link href="/assets/stylesheets/creations.css" type="text/css" rel="stylesheet" />
+		{% for stylesheet in page.stylesheets %}
+		<link href="/assets/stylesheets/{{ stylesheet }}.css" type="text/css" rel="stylesheet" />
+		{% endfor %}
 		{% for script in page.scripts %}
 		<script src="{{ script }}"></script>
 		{% endfor %}
