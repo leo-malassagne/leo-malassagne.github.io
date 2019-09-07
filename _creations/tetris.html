@@ -6,11 +6,11 @@ miniature: tetris-mini.png
 stylesheets:
   - tetris
 scripts:
-  - https://rawgit.com/leo-malassagne/TetrisJS/master/lib/crafty.js
-  - https://rawgit.com/leo-malassagne/TetrisJS/master/lib/soundmanager2.js
-  - https://rawgit.com/leo-malassagne/TetrisJS/master/src/components.js
-  - https://rawgit.com/leo-malassagne/TetrisJS/master/src/scenes.js
-  - https://rawgit.com/leo-malassagne/TetrisJS/master/src/game.js
+  - https://cdn.jsdelivr.net/gh/leo-malassagne/TetrisJS@v1.0/lib/crafty.js
+  - https://cdn.jsdelivr.net/gh/leo-malassagne/TetrisJS@v1.0/lib/soundmanager2.js
+  - https://cdn.jsdelivr.net/gh/leo-malassagne/TetrisJS@v1.0/src/components.js
+  - https://cdn.jsdelivr.net/gh/leo-malassagne/TetrisJS@v1.0/src/scenes.js
+  - https://cdn.jsdelivr.net/gh/leo-malassagne/TetrisJS@v1.0/src/game.js
 excerpt: Un tetris classique avec musique évolutive.
 lang: Javascript
 techs: CraftyJS, Soundmanager 2
@@ -19,7 +19,7 @@ credits:
 output: true
 ---
 <script>
-	var loc = "https://rawgit.com/leo-malassagne/TetrisJS/master/",
+	var loc = "https://cdn.jsdelivr.net/gh/leo-malassagne/TetrisJS@v1.0/",
         blockSize = window.innerHeight / 22;
 	window.addEventListener('load', function(){
 		soundManager.setup({
